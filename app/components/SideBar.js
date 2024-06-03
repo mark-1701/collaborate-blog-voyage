@@ -18,7 +18,7 @@ export function SideBar() {
   $sidebar.appendChild(SideBarLink({ icon: 'add_circle', title: 'Crear', funct: OpenCreatePostModal }));
   $sidebar.appendChild(SideBarLink({ icon: 'edit', title: 'Actualizar', funct: OpenUpdatePostModal }));
   $sidebar.appendChild(SideBarLink({ icon: 'post', title: 'Todos los post', link: '#/posts' }));
-  // $sidebar.appendChild(SideBarLink({ icon: 'account_circle', title: 'Perfil', link: '#/profile' }));
+  $sidebar.appendChild(SideBarLink({ icon: 'account_circle', title: 'Perfil', link: '#/profile' }));
   // $sidebar.appendChild(SideBarLink({ icon: 'info', title: 'Information', link: '#/information' }));
   return $sidebar;
 }

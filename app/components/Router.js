@@ -2,7 +2,7 @@ import { ajax } from '../helpers/ajax.js';
 import { Post } from '../pages/Post/Post.js';
 import { Posts } from './Posts.js';
 // import { Information } from '../pages/Information/Information.js';
-// import { Profile } from '../pages/Profile/Profile.js';
+import { Profile } from '../pages/Profile/Profile.js';
 
 export async function Router() {
   const $main = document.getElementById('main');
@@ -19,7 +19,7 @@ export async function Router() {
   } else if (hash.includes('#/posts')) {
     $main.appendChild(Posts());
   } else if (hash.includes('#/profile')) {
-    // $main.appendChild(Profile());
+    $main.appendChild(Profile());
   } else if (hash.includes('#/information')) {
     // $main.appendChild(Information());
   } else {
