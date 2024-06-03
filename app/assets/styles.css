@@ -1,0 +1,274 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.btn {
+  border: none;
+  cursor: pointer;
+}
+
+.input {
+  display: block;
+  width: 100%;
+  height: 3rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  border: 1px solid lightgray;
+}
+
+.submit {
+  width: 100%;
+  border: none;
+  padding: 1rem;
+  border-radius: 1rem;
+  color: #f2f2f2;
+  background-color: #4f46e5;
+  cursor: pointer;
+}
+
+.submit-delete {
+  background-color: #be123c;
+}
+
+/* ******************************** FORM  ************************************* */
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  padding: 4rem;
+  background-color: #29252479;
+}
+
+.close-btn-modal {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  width: 2rem;
+  height: 2rem;
+  color: white;
+  border: none;
+  background-color: transparent;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.modal form {
+  background-color: white;
+  width: 50%;
+  overflow: auto;
+  padding: 2rem;
+}
+
+.modal h1 {
+  text-align: center;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.user-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.user-image-profile {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  display: block;
+  margin: auto;
+  margin-bottom: 5rem;
+}
+
+
+/* ****************************** HEADER ************************************** */
+
+.icon-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  height: 4rem;
+  background-color: #f3f4f6;
+}
+
+/* ***************************** SIDE BAR  ************************************* */
+
+.sidebar {
+  width: 25%;
+  overflow: hidden;
+  background-color: #4f46e5;
+  transition: all 0.3s ease-out;
+}
+
+.sidebar-disabled {
+  width: 4rem;
+}
+
+.sidebar-link a {
+  display: flex;
+  align-items: center;
+  min-width: 24rem;
+  width: 100%;
+  height: 4rem;
+  text-decoration: none;
+  color: #f2f2f2;
+}
+
+.sidebar-link:hover {
+  background-color: #6366f1;
+  cursor: pointer;
+}
+
+.main {
+  width: 100%;
+  padding: 2rem;
+  overflow: auto;
+}
+
+.sidebarmain {
+  width: 100%;
+  height: calc(100vh - 4rem);
+  display: flex;
+  overflow: hidden;
+}
+
+/* ********************************** POSTS  ********************************** */
+
+.posts {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.post-card a {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  height: 450px;
+  background-color: #f1f4f6;
+  border-radius: 0.3rem;
+  padding: 2rem 1.2rem;
+  overflow: hidden;
+  cursor: pointer;
+  text-decoration: none;
+  color: #000;
+}
+
+.post-card img {
+  height: 70%;
+  object-fit: cover;
+}
+
+.post-card p {
+  font-weight: 300;
+}
+
+/* ********************************** POST  *********************************** */
+.image-post {
+  display: block;
+  max-width: 400px;
+  margin: auto;
+}
+
+/* *********************** MMATERIALES DE GOOGLE ICONS  *********************** */
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.hidden-element {
+  display: none;
+}
+
+@media (max-width: 600px) {
+
+  .header {
+    flex-direction: row-reverse;
+  }
+
+  .main {
+    margin-right: 4rem;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 4rem;
+    right: 0;
+    width: 4rem;
+    height: 100%;
+  }
+
+  .sidebar-disabled {
+    width: 40%;
+  }
+
+  .posts {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .modal {
+    padding: 4rem 2rem 2rem;
+  }
+
+  .modal form {
+    width: 100%;
+  }
+
+  .close-btn-modal {
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .user-form {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* @media (max-width: 768px) {
+  .posts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 1024px) {
+  .posts {
+    grid-template-columns: repeat(3, 1fr); 
+  }
+} */
