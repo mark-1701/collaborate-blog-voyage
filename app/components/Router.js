@@ -1,7 +1,7 @@
 import { ajax } from '../helpers/ajax.js';
 import { Post } from '../pages/Post/Post.js';
 import { Posts } from './Posts.js';
-// import { Information } from '../pages/Information/Information.js';
+import { Information } from '../pages/Information/Information.js';
 import { Profile } from '../pages/Profile/Profile.js';
 
 export async function Router() {
@@ -21,7 +21,7 @@ export async function Router() {
   } else if (hash.includes('#/profile')) {
     $main.appendChild(Profile());
   } else if (hash.includes('#/information')) {
-    // $main.appendChild(Information());
+    $main.appendChild(Information());
   } else {
     $main.innerHTML = `<p class="error-message">Not Found</p>`;
   }
